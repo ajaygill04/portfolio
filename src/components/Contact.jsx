@@ -1,3 +1,4 @@
+import emailjs from '@emailjs/browser';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import toast from 'react-hot-toast';
@@ -15,11 +16,21 @@ const Contact = () => {
     e.preventDefault();
     setSending(true);
     try {
-      await new Promise((r) => setTimeout(r, 1500));
-      toast.success('Message sent successfully!', { style: { background: '#1e293b', color: '#f1f5f9', borderRadius: '12px' } });
+      await emailjs.send(
+        'service_5p0744t',
+        'template_fl29e1l',
+        {
+          from_name: form.name,
+          from_email: form.email,
+          message: form.message,
+          to_name: 'Ajay Gill',
+        },
+        '5a05hoC3-jketRbaz'
+      );
+      toast.success('Message sent successfully! I will get back to you soon.', { style: { background: '#1e293b', color: '#f1f5f9', borderRadius: '12px' } });
       setForm({ name: '', email: '', message: '' });
     } catch {
-      toast.error('Something went wrong.');
+      toast.error('Something went wrong. Please try again.', { style: { background: '#1e293b', color: '#f1f5f9', borderRadius: '12px' } });
     } finally {
       setSending(false);
     }
