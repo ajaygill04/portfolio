@@ -1,0 +1,136 @@
+import { FaJava } from 'react-icons/fa';
+import {
+    SiArduino,
+    SiCplusplus,
+    SiExpress,
+    SiGit, SiGithub,
+    SiHtml5,
+    SiJavascript,
+    SiMongodb,
+    SiNodedotjs,
+    SiPostman,
+    SiPython, SiReact, SiTailwindcss
+} from 'react-icons/si';
+  
+  export const NAV_LINKS = [
+    { id: 'home', label: 'Home' },
+    { id: 'about', label: 'About' },
+    { id: 'skills', label: 'Skills' },
+    { id: 'projects', label: 'Projects' },
+    { id: 'experience', label: 'Experience' },
+    { id: 'certifications', label: 'Certs' },
+    { id: 'contact', label: 'Contact' },
+  ];
+  
+  export const SOCIAL_LINKS = {
+    github: 'https://github.com/ajaygill04',
+    linkedin: 'https://www.linkedin.com/in/ajay-gill-524a71230/',
+  };
+  
+  export const SKILLS = [
+    {
+      category: 'Languages',
+      items: [
+        { name: 'JavaScript', icon: SiJavascript, level: 90, color: '#F7DF1E' },
+        { name: 'C++', icon: SiCplusplus, level: 80, color: '#00599C' },
+        { name: 'Java', icon: FaJava, level: 75, color: '#ED8B00' },
+        { name: 'Python', icon: SiPython, level: 70, color: '#3776AB' },
+      ],
+    },
+    {
+      category: 'Frontend',
+      items: [
+        { name: 'React.js', icon: SiReact, level: 92, color: '#61DAFB' },
+        { name: 'Tailwind CSS', icon: SiTailwindcss, level: 90, color: '#06B6D4' },
+        { name: 'HTML5', icon: SiHtml5, level: 95, color: '#E34F26' },
+        { name: 'CSS3', icon: SiReact, level: 90, color: '#1572B6' },
+      ],
+    },
+    {
+      category: 'Backend',
+      items: [
+        { name: 'Node.js', icon: SiNodedotjs, level: 88, color: '#339933' },
+        { name: 'Express.js', icon: SiExpress, level: 85, color: '#888888' },
+      ],
+    },
+    {
+      category: 'Database',
+      items: [
+        { name: 'MongoDB', icon: SiMongodb, level: 85, color: '#47A248' },
+      ],
+    },
+    {
+      category: 'Tools',
+      items: [
+        { name: 'Git', icon: SiGit, level: 88, color: '#F05032' },
+        { name: 'GitHub', icon: SiGithub, level: 90, color: '#888888' },
+        { name: 'Postman', icon: SiPostman, level: 82, color: '#FF6C37' },
+        { name: 'Arduino', icon: SiArduino, level: 70, color: '#00979D' },
+      ],
+    },
+  ];
+  
+  export const PROJECTS = [
+    {
+      id: 1,
+      title: 'Wanderlust',
+      subtitle: 'Full Stack Travel Platform',
+      category: 'fullstack',
+      description: 'A comprehensive travel listing platform with full CRUD, authentication, image uploads, and interactive maps.',
+      longDescription: 'Wanderlust is a full-featured travel platform built using the MERN stack. Users can browse destinations, create listings, leave reviews, and interact with maps. Implements JWT auth, Cloudinary uploads, and responsive design.',
+      image: '/projects/wanderlust.jpg',
+      tech: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'Tailwind CSS', 'Cloudinary', 'JWT'],
+      github: 'https://github.com/ajaygill/wanderlust',
+      live: 'https://wanderlust-demo.vercel.app',
+      features: ['JWT Authentication', 'Full CRUD listings', 'Review and rating system', 'Cloudinary image uploads', 'Interactive maps', 'Mobile-first design'],
+    },
+    {
+      id: 2,
+      title: 'Gate Pass Management System',
+      subtitle: 'Institutional Management Tool',
+      category: 'fullstack',
+      description: 'Digital gate pass system with role-based access, real-time tracking, and QR code verification.',
+      longDescription: 'Digitizes pass issuance workflow for educational institutions. Supports admin, security, and student roles with real-time tracking and analytics.',
+      image: '/projects/gatepass.jpg',
+      tech: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'REST API'],
+      github: 'https://github.com/ajaygill/gatepass-system',
+      live: 'https://gatepass-demo.vercel.app',
+      features: ['Role-based access control', 'Real-time pass tracking', 'QR code verification', 'Admin analytics dashboard', 'Email notifications', 'PDF report export'],
+    },
+    {
+      id: 3,
+      title: 'Smart Waste Management System',
+      subtitle: 'IoT-Powered Solution',
+      category: 'iot',
+      description: 'IoT-based waste management using Arduino sensors to monitor bin levels and optimize collection routes.',
+      longDescription: 'Leverages Arduino ultrasonic sensors to monitor bin fill levels in real-time with a web dashboard for visualization and route optimization.',
+      image: '/projects/smartwaste.jpg',
+      tech: ['Arduino', 'IoT Sensors', 'Node.js', 'MongoDB', 'React.js', 'MQTT'],
+      github: 'https://github.com/ajaygill/smart-waste',
+      live: '',
+      features: ['Real-time bin monitoring', 'Live data dashboard', 'Threshold alerts', 'Route optimization', 'Historical analytics', 'Low-power sensor nodes'],
+    },
+  ];
+  
+  export const EXPERIENCE = [
+    {
+      id: 1,
+      role: 'Software Engineering Virtual Experience',
+      company: 'JPMorgan Chase & Co. (via Forage)',
+      period: '2024',
+      description: [
+        'Completed job simulation on backend engineering practices',
+        'Built and consumed RESTful APIs for financial data',
+        'Worked with Apache Kafka for event streaming',
+        'Integrated backend microservices with frontend dashboards',
+        'Applied clean code principles and design patterns',
+      ],
+      tech: ['REST APIs', 'Apache Kafka', 'Python', 'Git'],
+    },
+  ];
+  
+  export const CERTIFICATIONS = [
+    { id: 1, title: 'Full Stack Web Development', issuer: 'Udemy / Coursera', date: '2024', type: 'certification' },
+    { id: 2, title: 'Data Structures and Algorithms', issuer: 'GeeksforGeeks / LeetCode', date: '2024', type: 'certification' },
+    { id: 3, title: 'Smart Waste Management Using IoT', issuer: 'IEEE / Conference Publication', date: '2024', type: 'publication' },
+  ];
