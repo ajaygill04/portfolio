@@ -11,7 +11,7 @@ const Projects = () => {
   const [filter, setFilter] = useState('all');
   const [selected, setSelected] = useState(null);
   const filtered = filter === 'all' ? PROJECTS : PROJECTS.filter((p) => p.category === filter);
-  const emojis = { 1: '🌍', 2: '🏢', 3: '♻️' };
+  const emojis = { 1: '🌍', 2: '💼', 3: '🏢', 4: '♻️' };
 
   return (
     <SectionWrapper id="projects" className="relative">
